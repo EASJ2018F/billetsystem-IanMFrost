@@ -27,9 +27,8 @@ namespace BilletLib
         /// </summary>
         public override string NummerPladeBegrænsing()
         {
-            int.TryParse(Nummerplade = 7);
 
-            if (Nummerplade > 7)
+            if (Nummerplade.Length < 7)
             {
                 throw new ArgumentException("Nummerplade er længere end 7 cifrer");
             }

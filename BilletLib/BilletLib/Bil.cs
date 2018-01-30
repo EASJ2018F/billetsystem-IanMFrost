@@ -23,7 +23,12 @@ namespace BilletLib
 
         public override string NummerPladeBegrænsing()
         {
-            throw new NotImplementedException();
+            if (Nummerplade.Length < 7)
+            {
+                throw new ArgumentException("Ops din nummerplade indeholder mere end 7 cifre");
+            }
+
+            return Nummerplade;
         }
     }
 }
