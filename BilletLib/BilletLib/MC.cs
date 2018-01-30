@@ -6,21 +6,35 @@ using System.Threading.Tasks;
 
 namespace BilletLib
 {
-    public class MC
+    public class MC : Køretøjer
     {
 
         public string Nummerplade { get; set; }
         public DateTime Dato { get; set; }
 
-        public int Pris()
-        {
-            return 125;
-        }
-
-        public string køretøj()
+        public override string Køretøj()
         {
             return "MC";
         }
 
+        public override int Pris()
+        {
+            return 125;
+        }
+
+        /// <summary>
+        /// Sikrer sig at der kun kan oprettes en nummerplade med 7 cifre. Er den længere end 7 cifre smider den en exception
+        /// </summary>
+        public override string NummerPladeBegrænsing()
+        {
+            int.TryParse(Nummerplade = 7);
+
+            if (Nummerplade > 7)
+            {
+                throw new ArgumentException("Nummerplade er længere end 7 cifrer");
+            }
+
+            return Nummerplade;
+        }
     }
 }

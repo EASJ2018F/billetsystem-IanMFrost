@@ -25,11 +25,22 @@ namespace UnitTest
             // arrange
             MC Suzuki = new MC();
             //act
-            string køretøj = Suzuki.køretøj();
+            string køretøj = Suzuki.Køretøj();
             // Assert
             Assert.AreEqual("MC", køretøj);
+        }
 
-        
+        [TestMethod]
+        public void TestLængdeForNummerplade()
+        {
+            // arrange
+            MC GrimCykel = new MC();
+
+            // act
+            string nummerplade = GrimCykel.NummerPladeBegrænsing();
+
+            // Assert
+            Assert.AreEqual(7,nummerplade);
         }
     }
 }
