@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilletLib", "BilletLib\BilletLib.csproj", "{44AE75B6-9D55-4005-A7C4-5D9D07378817}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{C5FC5400-93FF-4F32-B017-0DEF679E59B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{44AE75B6-9D55-4005-A7C4-5D9D07378817}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44AE75B6-9D55-4005-A7C4-5D9D07378817}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44AE75B6-9D55-4005-A7C4-5D9D07378817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5FC5400-93FF-4F32-B017-0DEF679E59B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5FC5400-93FF-4F32-B017-0DEF679E59B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5FC5400-93FF-4F32-B017-0DEF679E59B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5FC5400-93FF-4F32-B017-0DEF679E59B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
