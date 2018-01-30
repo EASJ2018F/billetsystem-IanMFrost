@@ -23,7 +23,15 @@ namespace UnitTest
         [TestMethod]
         public void TestForKøretøj()
         {
+            // arrage
+            Bil Toyota = new Bil();
 
+            // act
+            string køretøj = Toyota.Køretøj();
+
+            // assert
+
+            Assert.AreEqual("bil",køretøj);
         }
     }
 }
