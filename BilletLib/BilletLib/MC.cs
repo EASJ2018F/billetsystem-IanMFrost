@@ -25,15 +25,15 @@ namespace BilletLib
         /// <summary>
         /// Sikrer sig at der kun kan oprettes en nummerplade med 7 cifre. Er den længere end 7 cifre smider den en exception
         /// </summary>
-        public override string NummerPladeBegrænsing()
+        public override int NummerPladeBegrænsing()
         {
-
-            if (Nummerplade.Length < 7)
+            
+            if (Nummerplade.Length > 7)
             {
                 throw new ArgumentException("Nummerplade er længere end 7 cifrer");
             }
 
-            return Nummerplade;
+            return Nummerplade.Length;
         }
     }
 }

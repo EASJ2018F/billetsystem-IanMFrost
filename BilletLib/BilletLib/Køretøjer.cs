@@ -12,7 +12,7 @@ namespace BilletLib
 
         public abstract int Pris();
 
-        public abstract string NummerPladeBegrænsing();
+        public abstract int NummerPladeBegrænsing();
 
 
 

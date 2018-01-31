@@ -31,16 +31,17 @@ namespace UnitTest
         }
 
         [TestMethod]
+        [ExpectedException((typeof(ArgumentException)))]
         public void TestLængdeForNummerplade()
         {
             // arrange
             MC GrimCykel = new MC();
 
             // act
-            string nummerplade = GrimCykel.NummerPladeBegrænsing();
+            GrimCykel.Nummerplade = "12345678";
 
             // Assert
-            Assert.AreEqual(7,nummerplade);
+            Assert.AreEqual(8,GrimCykel.NummerPladeBegrænsing());
         }
     }
 }

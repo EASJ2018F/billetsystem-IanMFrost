@@ -21,14 +21,14 @@ namespace BilletLib
             return 240;
         }
 
-        public override string NummerPladeBegrænsing()
+        public override int NummerPladeBegrænsing()
         {
-            if (Nummerplade.Length < 7)
+            if (Nummerplade.Length > 8)
             {
                 throw new ArgumentException("Ops din nummerplade indeholder mere end 7 cifre");
             }
 
-            return Nummerplade;
+            return Nummerplade.Length;
         }
     }
 }
