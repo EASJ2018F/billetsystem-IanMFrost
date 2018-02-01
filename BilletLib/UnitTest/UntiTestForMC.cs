@@ -25,7 +25,7 @@ namespace UnitTest
             // arrange
             MC Suzuki = new MC();
             //act
-            string køretøj = Suzuki.Køretøj();
+            string køretøj = Suzuki.KøretøjType();
             // Assert
             Assert.AreEqual("MC", køretøj);
         }
@@ -43,5 +43,41 @@ namespace UnitTest
             // Assert
             Assert.AreEqual(8,GrimCykel.NummerPladeBegrænsing());
         }
+
+        [TestMethod]
+        public void TestPrisMcBrugerBrobizz()
+        {
+            // arrange
+            MC BrobizzCykel = new MC();
+
+            // act
+            BrobizzCykel.BrobizzBrugt = true;
+            // assert
+            Assert.AreEqual(119,BrobizzCykel.Pris());
+        }
+
+        [TestMethod]
+        public void McOverBroPris()
+        {
+            // arrange 
+            MC motorcykel2 = new MC();
+            // act
+            motorcykel2.Øresundsbroen = true;
+            // assert
+            Assert.AreEqual(210,motorcykel2.Pris());
+        }
+
+        [TestMethod]
+        public void McOverBroMedBroBizz()
+        {
+            // arrange
+            MC motorcykel3 = new MC();
+            // act
+            motorcykel3.Øresundsbroen = true;
+            motorcykel3.BrobizzBrugt = true;
+            // assert
+            Assert.AreEqual(73, motorcykel3.Pris());
+        }
+ 
     }
 }

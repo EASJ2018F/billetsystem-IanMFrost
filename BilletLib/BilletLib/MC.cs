@@ -8,19 +8,22 @@ namespace BilletLib
 {
     public class MC : Køretøjer
     {
+        public override int KøretøjPris { get; set; }
+        public  override string Nummerplade { get; set; }
+        public override DayOfWeek Dato { get; set; }
+        public override bool BrobizzBrugt { get; set; }
 
-        public string Nummerplade { get; set; }
-        public DateTime Dato { get; set; }
-
-        public override string Køretøj()
+        public override string KøretøjType()
         {
+            if (Øresundsbroen)
+            {
+                return "Øresund MC";
+            }
+
             return "MC";
         }
 
-        public override int Pris()
-        {
-            return 125;
-        }
+        public override bool Øresundsbroen { get; set; }
 
         /// <summary>
         /// Sikrer sig at der kun kan oprettes en nummerplade med 7 cifre. Er den længere end 7 cifre smider den en exception
