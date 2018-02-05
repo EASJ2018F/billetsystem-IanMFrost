@@ -27,14 +27,15 @@ namespace BilletLib
 
         public override bool Øresundsbroen { get; set; }
 
-        public override int NummerPladeBegrænsing()
+        public override void NummerPladeBegrænsing()
         {
-            if (Nummerplade.Length > 8)
+            
+            if (Nummerplade.Length > 7)
             {
                 throw new ArgumentException("Ops din nummerplade indeholder mere end 7 cifre");
             }
 
-            return Nummerplade.Length;
+          
         }
 
         public int WeekendRabat()

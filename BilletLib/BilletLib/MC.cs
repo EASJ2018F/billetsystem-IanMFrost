@@ -11,6 +11,8 @@ namespace BilletLib
         public override int KøretøjPris { get; set; }
         public  override string Nummerplade { get; set; }
         public override DayOfWeek Dato { get; set; }
+        
+
         public override bool BrobizzBrugt { get; set; }
 
         public override string KøretøjType()
@@ -28,7 +30,7 @@ namespace BilletLib
         /// <summary>
         /// Sikrer sig at der kun kan oprettes en nummerplade med 7 cifre. Er den længere end 7 cifre smider den en exception
         /// </summary>
-        public override int NummerPladeBegrænsing()
+        public override void NummerPladeBegrænsing()
         {
             
             if (Nummerplade.Length > 7)
@@ -36,7 +38,7 @@ namespace BilletLib
                 throw new ArgumentException("Nummerplade er længere end 7 cifrer");
             }
 
-            return Nummerplade.Length;
+            
         }
     }
 }

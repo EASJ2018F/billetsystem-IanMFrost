@@ -10,7 +10,7 @@ namespace BilletLib
     {
         public abstract string KøretøjType();
         public abstract bool Øresundsbroen { get; set; }
-        public abstract int NummerPladeBegrænsing();
+        public abstract void NummerPladeBegrænsing();
 
         public abstract bool BrobizzBrugt { get; set; }
         public abstract int KøretøjPris { get; set; }
