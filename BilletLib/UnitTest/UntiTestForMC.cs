@@ -31,7 +31,7 @@ namespace UnitTest
         }
 
         [TestMethod]
-        [ExpectedException((typeof(ArgumentException)))]
+        [ExpectedException(typeof(ArgumentException), "Nummerplade er længere end 7 cifrer")]
         public void TestLængdeForNummerplade()
         {
             // arrange
@@ -39,9 +39,10 @@ namespace UnitTest
 
             // act
             GrimCykel.Nummerplade = "12345678";
+            GrimCykel.NummerPladeBegrænsing();
 
             // Assert
-            Assert.AreEqual(8,GrimCykel.NummerPladeBegrænsing());
+            
         }
 
         [TestMethod]

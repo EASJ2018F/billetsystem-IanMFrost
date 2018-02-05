@@ -11,7 +11,7 @@ namespace UnitTest
         public void TestPrisEr240()
         {
             // arrange
-             Bil Toyota =new Bil();
+             Bil Toyota = new Bil();
 
             // act
             int pris = Toyota.Pris();
@@ -21,13 +21,15 @@ namespace UnitTest
 
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "Ops din nummerplade indeholder mere end 7 cifre")]
         public void TestNummerPladeLængdeForBil()
         {
             Bil BilMedLangnummerplade = new Bil();
 
             BilMedLangnummerplade.Nummerplade = "12345678";
+            BilMedLangnummerplade.NummerPladeBegrænsing();
 
-            Assert.AreEqual(8, BilMedLangnummerplade.NummerPladeBegrænsing());
+
         }
 
 
