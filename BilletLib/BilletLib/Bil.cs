@@ -15,6 +15,10 @@ namespace BilletLib
         public override bool BrobizzBrugt { get; set; }
 
 
+        /// <summary>
+        /// Returner køretøjstyper, alt efter hvis den kører over Øresundsbroen eller ej. 
+        /// </summary>
+        /// <returns></returns>
         public override string KøretøjType()
         {
             if (Øresundsbroen)
@@ -27,6 +31,9 @@ namespace BilletLib
 
         public override bool Øresundsbroen { get; set; }
 
+        /// <summary>
+        /// Sørger for at der kun må være maks 7 cifre i nummerpladen.
+        /// </summary>
         public override void NummerPladeBegrænsing()
         {
             
@@ -37,6 +44,11 @@ namespace BilletLib
 
           
         }
+
+        /// <summary>
+        /// Udregner rabat i weekenden
+        /// </summary>
+        /// <returns></returns>
 
         public int WeekendRabat()
         {

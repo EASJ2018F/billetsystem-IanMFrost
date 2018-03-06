@@ -15,6 +15,10 @@ namespace BilletLib
 
         public override bool BrobizzBrugt { get; set; }
 
+        /// <summary>
+        /// Returner om det er en Øresunds MC, eller en MC
+        /// </summary>
+        /// <returns></returns>
         public override string KøretøjType()
         {
             if (Øresundsbroen)
